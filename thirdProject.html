@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Item</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        #cart{
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        #first{
+            margin-left: 10px;
+        }
+        #fifth{
+            margin-right: 10px;
+        }
+        #cart div{
+            background-color: #fff8eb;
+            width: 195px;
+            height: 180px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px gray;
+        }
+        #cart h2{
+            text-align: center;
+            color: #00316d;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+        }
+        #cart p{
+            text-align: center;
+            color: #264f80;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+        }
+        .firstP{
+            margin-top: 45px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cart"></div>
+</body>
+<script>
+    let myJson={"response_code":200,"response_msg":"Successfully Fetched Xpand List","response_data":{"subjects":[{"subject_name":"Physics","subject_logo":null,"subscription_id":15637,"chapters":[{"chapter_name":"Unit & Measurement","no_of_questions":94,"attempted":20,"correct":4,"last_question_index":null,"course_content_id":127958,"is_applicable":1,"is_active":1},{"chapter_name":"Motion and Time","no_of_questions":175,"attempted":2,"correct":1,"last_question_index":null,"course_content_id":127959,"is_applicable":1,"is_active":1},{"chapter_name":"Projectile motion","no_of_questions":0,"attempted":0,"correct":0,"last_question_index":null,"course_content_id":127960,"is_applicable":1,"is_active":1},{"chapter_name":"Force, Work, Power and Energy","no_of_questions":238,"attempted":2,"correct":1,"last_question_index":null,"course_content_id":127961,"is_applicable":1,"is_active":1},{"chapter_name":"Rotational Motion","no_of_questions":137,"attempted":0,"correct":0,"last_question_index":null,"course_content_id":127962,"is_applicable":1,"is_active":1},{"chapter_name":"Gravitation","no_of_questions":74,"attempted":0,"correct":0,"last_question_index":null,"course_content_id":127963,"is_applicable":1,"is_active":1},{"chapter_name":"Mechanical Properties of Solids","no_of_questions":18,"attempted":0,"correct":0,"last_question_index":null,"course_content_id":127964,"is_applicable":1,"is_active":1},{"chapter_name":"Mechanical Properties of Fluids","no_of_questions":58,"attempted":0,"correct":0,"last_question_index":null,"course_content_id":127965,"is_applicable":1,"is_active":1},{"chapter_name":"Thermal Properties of Matter","no_of_questions":88,"attempted":0,"correct":0,"last_question_index":null,"course_content_id":127966,"is_applicable":1,"is_active":1},{"chapter_name":"Thermodynamics","no_of_questions":149,"attempted":0,"correct":0,"last_question_index":null,"course_content_id":127967,"is_applicable":1,"is_active":1},{"chapter_name":"Behaviour of Gases & Kinetic Theory","no_of_questions":0,"attempted":0,"correct":0,"last_question_index":null,"course_content_id":127968,"is_applicable":1,"is_active":1},{"chapter_name":"Oscillation & Waves","no_of_questions":230,"attempted":0,"correct":0,"last_question_index":null,"course_content_id":127969,"is_applicable":1,"is_active":1},{"chapter_name":"Waves","no_of_questions":0,"attempted":0,"correct":0,"last_question_index":null,"course_content_id":127970,"is_applicable":1,"is_active":1}]}],"wish":"Good Morning","page_size":5}};
+    let cart=document.getElementById('cart');
+    cart.innerHTML=`
+    <div id="first">
+        <h2>${myJson["response_data"]["subjects"][0]["chapters"][0]["chapter_name"]}</h2>
+        <p>Questions: ${myJson["response_data"]["subjects"][0]["chapters"][0]["no_of_questions"]}</p>
+        <p>Attempted: ${myJson["response_data"]["subjects"][0]["chapters"][0]["attempted"]}</p>    
+    </div>
+    <div id="second">
+        <h2>${myJson["response_data"]["subjects"][0]["chapters"][1]["chapter_name"]}</h2>
+        <p class="firstP">Questions: ${myJson["response_data"]["subjects"][0]["chapters"][1]["no_of_questions"]}</p>
+        <p>Attempted: ${myJson["response_data"]["subjects"][0]["chapters"][1]["attempted"]}</p>    
+    </div>
+    <div id="third">
+        <h2>${myJson["response_data"]["subjects"][0]["chapters"][2]["chapter_name"]}</h2>
+        <p class="firstP">Questions: ${myJson["response_data"]["subjects"][0]["chapters"][2]["no_of_questions"]}</p>
+        <p>Attempted: ${myJson["response_data"]["subjects"][0]["chapters"][2]["attempted"]}</p>    
+    </div>
+    <div id="fourth">
+        <h2>${myJson["response_data"]["subjects"][0]["chapters"][3]["chapter_name"]}</h2>
+        <p>Questions: ${myJson["response_data"]["subjects"][0]["chapters"][3]["no_of_questions"]}</p>
+        <p>Attempted: ${myJson["response_data"]["subjects"][0]["chapters"][3]["attempted"]}</p>    
+    </div>
+    <div id="fifth">
+        <h2>${myJson["response_data"]["subjects"][0]["chapters"][4]["chapter_name"]}</h2>
+        <p class="firstP">Questions: ${myJson["response_data"]["subjects"][0]["chapters"][4]["no_of_questions"]}</p>
+        <p>Attempted: ${myJson["response_data"]["subjects"][0]["chapters"][4]["attempted"]}</p>    
+    </div>
+    `;
+</script>
+</html>

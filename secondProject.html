@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Edudigm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap"
+    rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: #ffffff;
+            margin: 0px;
+            font-family: 'Poppins', sans-serif;
+            padding-bottom: 80px;
+        }
+        #logo{
+            height: auto;
+            width: 150px;
+            box-shadow: 2px 3px 10px 3px #e2e2e2;
+        }
+        nav{
+            background-color: #ffffff;
+            position: relative;
+            height: 70px;
+            box-shadow: 0px 0px 20px 2px #e8e8e8;
+            height: 70px;
+        }
+        figure{
+            margin: 0px;
+            margin-left: 10px;
+        }
+        figure img{
+            border-radius: 6px;
+            margin-top: 4px;
+        }
+        li{
+            list-style-type: none;
+            margin-left: 25px;
+        }
+        nav li:hover{
+            color: #ec9e4a;
+            cursor: pointer;
+        }
+        ul{
+            margin: 0px;
+            display: flex;
+            flex-direction: row;
+        }
+        #parent{
+            position: absolute;
+            top: 20px;
+            left: 460px;
+        }
+        h1{
+            font-family: 'Cormorant Garamond', serif;
+            color: #f98900;
+            text-align: center;
+        }
+        #video{
+            width: 600px;
+            text-align: center;
+            margin-right: 16px;
+        }
+        #video p{
+            font-weight: bold;
+            width: 588px;
+        }
+        #text ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin: 0px;
+            padding: 0px;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        #text li{
+            list-style-type: none;
+            list-style-image: url('tick2.png');
+            list-style-position: inside;
+            background-color: #fefbea;
+            margin: 0px;
+            padding: 18px 0px 18px 18px;
+            font-size: 20px;
+            font-weight: bold;
+            width: 530px;
+            border-radius: 8px;
+            /* margin-left: 50px; */
+            box-shadow: 0px 0px 8px 0px gray;
+        }
+        #second{
+            margin-left: 30px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: center;
+            position: relative;
+        }
+        iframe{
+            border-radius: 13px;
+        }
+        #lastLi{
+            background-color: #fefbea;
+            margin-top: 60px;
+            height: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid #c69961;
+            border-radius: 8px;
+            position: relative;
+        }
+        #lastLi p{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        #inputText{
+            padding: 8px;
+            width: 300px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none; 
+        }
+        #inputBtn{
+            padding: 8px 45px;
+            border-radius: 6px;
+            background-color: #ff1162;
+            border: 1px solid #ff1162;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #third{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #mid{
+            display: flex;
+            flex-direction: row;
+        }
+        #one{
+            background-color: #d90049;
+            width: 250px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #two{
+            display: flex;
+            flex-direction: column;
+        }
+        #twoOne,#twoSecond{
+            background-color: #ff9000;
+            width: 400px;
+            height: 150px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        #twoSecond{
+            background-color: #ffee00;
+        }
+        .firstImage{
+            border-radius: 35px;
+            height: 60px;
+            width: 50px;
+        }
+        #one p,#two p{
+            color: #ffdf1e;
+            font-size: 20px;
+            text-align: center;
+            font-family: 'DynaPuff', cursive;
+            letter-spacing: 1px;
+            line-height: 35px;
+        }
+        #twoSecond p{
+            color: #222400;
+        }
+        #two p{
+            text-align: left;
+        }
+        #two .firstImage{
+            margin-top: 40px;
+        }
+        #third p{
+            width: 650px;
+            text-align: center;
+        }
+        #fourth{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        #fourth ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #fourth li{
+            list-style-type: none;
+            line-height: 50px;
+            font-size: 25px;
+        }
+        .part{
+            width: 250px;
+            height: 160px;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+        #firstPart{
+            background-color: #ff9000;
+            margin-right: 15px;
+        }
+        #secondPart{
+            background-color: #ffebd0;
+            margin-right: 10px;
+        }
+        #thirdPart{
+            background-color: #ffebd0;
+            margin-right: 15px;
+        }
+        #fourthPart{
+            background-color: #ff9000;
+            margin-right: 10px;
+        }
+        #firstLine,#secondLine{
+            display: flex;
+            flex-direction: row;
+        }
+        #parts{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .part div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 8px;
+        }
+        .part img{
+            width: 70px;
+            height: 70px;
+        }
+        .part h2{
+            margin: 0px;
+            text-align: center;
+            font-family: 'DynaPuff', cursive;
+        }
+        .part p{
+            text-align: center;
+            font-size: 13px;
+            margin-top: 20px;
+        }
+        #fourth{
+            position: relative;
+        }
+        #fourth ul{
+            margin: 0px;
+            padding: 0px;
+            z-index: 2;
+        }
+        #fourth li:before{
+            content: '\2B1F';
+            margin-right: 25px;
+            color: #ff9306;
+            font-size: 25px;
+        }
+        .line2{
+            height: 195px;
+            width: 4px;
+            background-color: #f5e934;
+            position: absolute;
+            left: 32.5px;
+            top: 70px;
+            z-index: 1;
+        }
+        #fourth li:last-child{
+            line-height: 27px;
+        }
+        span{
+            margin-left: 44px;
+        }
+        #thirdPart h2{
+            margin-top: 15px;
+        }
+        #thirdPart p{
+            text-align: justify;
+            padding: 0px 8px;
+        }
+        abbr{
+            text-decoration: none;
+        }
+        .side{
+            margin-left: 15px;
+            margin-top: -10px;
+        }
+        #lastLi #telP{
+            margin: 0px;
+            font-size: 10px;
+            display: inline;
+            color: red;
+            position: absolute;
+            top: 110px;
+            left: 68px;
+        }
+        #register{
+            background-color: #ff1162;
+            color: white;
+            writing-mode: vertical-lr;
+            height: 112px;
+            border-radius: 10px;
+            width: 40px;
+            margin-top: 255px;
+            margin-left: -55px;
+            transform: rotate(180deg);
+            padding: 10px 0px;
+        }
+        #register p{
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="https://www.edudigm.in/"><figure>
+            <img src="https://www.edudigm.in/eduassets/images/logo.png" alt="edudigmlogo" id="logo">
+        </figure></a>
+        <div id="parent">
+            <ul>
+                <li>Home</li>
+                <li>Programs</li>
+                <li>EAST</li>
+                <li>GoSTEM</li>
+                <li>Results</li>
+                <li>Scholarships</li>
+                <li>Shop Here</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+    </nav>
+    <div id="second">
+        <div id="register">
+            <p>Register Here</p>
+        </div>
+        <div id="video">
+            <h1>Why Should You Take <abbr title="Edudigm Aptitude cum Scholarship Test">EAST</abbr>?</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/KY6-Q_ZPS8I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Through EAST we aim to recognise talented students with an extraodinary aptitude in STEM and reward them with merit based scholarships to help them realise their true potential in the various state and national level competitive examinations</p>
+        </div>
+        <div id="text">
+            <ul>
+                <li class="texts"><span class="side">Best IITians will be yours mentors</span></li>
+                <li class="texts"><span class="side">Guarantee success in JEE and NEET exams</span></li>
+                <li class="texts"><span class="side">Fun Science and Maths Learning</span></li>
+                <li class="texts"><span class="side">Affordable fees in market</span></li>
+            </ul>
+            <div id="lastLi">
+                <p>Register Here</p>
+                <form action="#">
+                    <input type="number" placeholder="Enter 10 Digit Mobile Number" id="inputText">
+                    <input type="submit" value="Send OTP" id="inputBtn">
+                </form>
+                <p id="telP"></p>
+            </div>
+        </div>
+    </div>
+    <div id="third">
+        <h1>SUCCESS STORIES</h1>
+        <div id="mid">
+            <div id="one">
+                <figure>
+                    <img src="https://stylesatlife.com/wp-content/uploads/2020/03/Crisp-White-Formal-Shirt.jpg" alt="firstImage" class="firstImage">
+                </figure>
+                <p>Ipsit Patra<br>class V<br>scholarship 70%</p>
+            </div>
+            <div id="two">
+                <div id="twoOne">
+                    <figure>
+                        <img src="https://stylesatlife.com/wp-content/uploads/2020/03/Crisp-White-Formal-Shirt.jpg" alt="firstImage" class="firstImage">
+                    </figure>
+                    <p>Soumil Maity<br>Class VI<br>Scholarship 80%</p>
+                </div>
+                <div id="twoSecond">
+                    <figure>
+                        <img src="https://stylesatlife.com/wp-content/uploads/2020/03/Crisp-White-Formal-Shirt.jpg" alt="firstImage" class="firstImage">
+                    </figure>
+                    <p>Arnab Pal<br>Class VI<br>Scholarship 80%</p>
+                </div>
+            </div>
+        </div>
+        <p>Our students are studying in the top Science, Engineering & Medical Colleges not only in India but also across the world such as MIT, University of Pennsylvania, Oxford University, Max Planck</p>
+    </div>
+    <div id="fourth">
+        <ul>
+            <li>Realise your true potential</li>
+            <li>Understand your aptitude in <strong>STEM</strong></li>
+            <li>Identify your weak and strong areas</li>
+            <li>Reward your talent with <strong>merit based<br><span>scholarships</span></strong></li>
+        </ul>
+        <div id="parts">
+            <div id="firstLine">
+                <div class="part" id="firstPart">
+                    <div>
+                        <img src="hand.svg" alt="hand pic">
+                        <h2>Know your <br>Forte</h2>
+                    </div>
+                    <p>Enhance Your Strengths And<br>Weaknesses By Recognizing Them!</p>
+                </div>
+                <div class="part" id="secondPart">
+                    <div>
+                        <h2>Time<br>Analysis</h2>
+                        <img src="timer.svg" alt="hand pic">
+                    </div>
+                    <p>Don't Run Out Of Time. Stay Ahead Always.</p>
+                </div>
+            </div>
+            <div id="secondLine">
+                <div class="part" id="thirdPart">
+                    <div>
+                        <img src="unknown.svg" alt="hand pic">
+                        <h2>Error Analysis</h2>
+                    </div>
+                    <p>Mistakes Are Part Of The Journey To Improvement!</p>
+                </div>
+                <div class="part" id="fourthPart">
+                    <div>
+                        <h2>Bloom's<br>Taxonomy</h2>
+                        <img src="pizza.svg" alt="hand pic">
+                    </div>
+                    <p>Are You Understanding What You're Learning?Find Out</p>
+                </div>
+            </div>
+        </div>
+        <div class="line2"></div>
+    </div>
+    <script>
+        let telP=document.getElementById('telP');
+        let input=document.getElementById('inputText');
+        input.addEventListener('input',function (x){
+            if(x.target.value.length<10 || x.target.value.length>10){
+                telP.innerHTML="Please Enter a Valid Mobile Number";
+            }else{
+                telP.innerHTML="";
+            }
+        })
+    </script>
+</body>
+</html>
